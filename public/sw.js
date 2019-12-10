@@ -1,41 +1,50 @@
-var CACHE_NAME = 'cache';
-
-var urlsToCache = [
+let CACHE_NAME = 'cache_v1';
+let urlsToCache = [
   '/',
-  '/static/js/bundle.js',
   '/eventos',
   'https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap',
   '/eventos/2019-12-07-Luiza/luiza-194_low.jpg'
-]
+];
 
-self.addEventListener('install', function (event) {
+// Install a service worker
+self.addEventListener('install', event => {
+  // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(function (cache) {
+      .then(function(cache) {
+        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
-  )
-})
+  );
+});
 
-self.addEventListener('activate', function (event) {
-  const cacheWhiteList = [CACHE_NAME];
-  event.waitUntil(
-    caches.keys().then(keyList => Promise.all(keyList.map(key => {
-      if (!cacheWhiteList.includes(key)) {
-        return caches.delete(key);
-      }
-    })))
-  )
-})
-
-self.addEventListener('fetch', function (event) {
+// Cache and return requests
+self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(function (response) {
+      .then(function(response) {
+        // Cache hit - return response
         if (response) {
           return response;
         }
         return fetch(event.request);
-      })
-  )
-})
+      }
+    )
+  );
+});
+
+// Update a service worker
+self.addEventListener('activate', event => {
+  let cacheWhitelist = ['cache_v1'];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});

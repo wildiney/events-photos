@@ -18,7 +18,7 @@ const Album = (props) => {
           <li className={styles.pict}>
             <img 
               className={styles.img_responsive}
-              srcset={`${fotos.lowres} 768w, ${fotos.mediumres} 992w, ${fotos.highres} 1200w`}
+              srcset={`${fotos.lowres} 768w`}
               alt={evento.evento} />
           </li>
           </LazyLoad>
