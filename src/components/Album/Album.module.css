@@ -1,0 +1,17 @@
+body{
+  background-color: darkslategray;
+}
+h1{
+  padding:20px;
+  font-size: 1em;
+}
+.pict{
+  background-color: rgba(255, 255, 255, 0.7);
+  list-style: none;
+  display: block;
+  margin:10px;
+  border:10px solid white;
+}
+.img_responsive{
+  width: 100%;;
+}
