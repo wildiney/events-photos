@@ -1,5 +1,6 @@
 import React from 'react'
 import Album from '../Album/Album'
+import Menu from '../Menu/Menu'
 
 
 const Eventos = (props) => {
@@ -44,16 +45,19 @@ const Eventos = (props) => {
   console.log(eventos)
 
   return (
-    <div className="container" >
-      <div className="row">
-        <div className="col-6 mx-auto">
-          <div className="postit">
-            <h1>{eventos.evento}<small>({eventos.data})</small></h1>
-            {eventos.download !== null &&
-              <a className="btn btn-success" href="http://services.slicedpixel.com/downloads/file/2019-12-07-Luiza.zip">Download em alta</a>
-            }
+    <div>
+      <Menu />
+      <div className="container" >
+        <div className="row">
+          <div className="col-6 mx-auto">
+            <div className="postit">
+              <h1>{eventos.evento}<small>({eventos.data})</small></h1>
+              {eventos.download !== null &&
+                <a className="btn btn-success" href="http://services.slicedpixel.com/downloads/file/2019-12-07-Luiza.zip">Download em alta</a>
+              }
+            </div>
+            <Album eventos={eventos} />
           </div>
-          <Album eventos={eventos} />
         </div>
       </div>
     </div>

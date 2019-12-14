@@ -15,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/eventos" component={Home} exact />
         <Route path="/eventos/aniversario/:id" component={Eventos} />
+        <Route path="/eventos/festa/:id" component={Eventos} />
       </Switch>
     </main>
   );

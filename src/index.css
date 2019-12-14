@@ -7,10 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:(--dark);
+  background-color: #282c34;
+  /*
   background-image: url('https://slicedpixel.com/eventos/2019-12-07-Luiza/luiza-194_low.jpg');
   background-size: cover;
   background-attachment: fixed;
+  */
   overflow-x: hidden;
 }
 
@@ -19,30 +21,30 @@ code {
     monospace;
 }
 
-.postit{
+.postit {
   position: relative;
-  padding-top:30px;
-  top:0;
+  padding-top: 30px;
+  top: 0;
   left: 50%;
-  margin-left:-140px;
+  margin-left: -140px;
   width: 280px;
   height: 280px;
   text-align: center;
   background-color: yellow;
-  color:blue;
+  color: blue;
   text-transform: uppercase;
   font-family: 'Permanent Marker', cursive;
   transform: rotate(-15deg);
   font-size: 2em;
   display: block;
-  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.6);
-  }
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.6);
+}
 
-.eventos h2{
-  background-color: rgba(0,0,0,0.8);
+.eventos h2 {
+  background-color: rgba(0, 0, 0, 0.8);
   margin-bottom: 0;
-  padding:15px;
-  color:white;
+  padding: 15px;
+  color: white;
   text-decoration: none;
   border-radius: 10px 10px 0 0;
 }
