@@ -10,22 +10,18 @@ const Loading = ()=>(
 )
 
 const Album = (props) => {
-  const eventos = props.eventos.map(
-    (evento) => (
-      evento.fotos.map(
+  const eventos = props.eventos.fotos.map(
         (fotos, index)=>(
           <LazyLoad key={index} placeholder={<Loading />}>
           <li className={styles.pict}>
             <img 
               className={styles.img_responsive}
-              srcset={`${fotos.lowres} 768w`}
-              alt={evento.evento} />
+              srcSet={`${fotos.lowres} 768w`}
+              alt={props.eventos.evento} />
           </li>
           </LazyLoad>
         )
-      )
-    )
-  );
+      );
   return eventos;
 }
 

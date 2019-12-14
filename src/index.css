@@ -20,7 +20,7 @@ code {
 }
 
 .postit{
-  position: absolute;
+  position: relative;
   padding-top:30px;
   top:0;
   left: 50%;
@@ -37,6 +37,12 @@ code {
   display: block;
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.6);
   }
-.container{
-  padding-top:250px;
+
+.eventos h2{
+  background-color: rgba(0,0,0,0.8);
+  margin-bottom: 0;
+  padding:15px;
+  color:white;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
 }
