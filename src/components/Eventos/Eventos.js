@@ -26,17 +26,17 @@ const Eventos = (props) => {
 
   for (let i = 1; i < 438; i++) {
     eventList[0].fotos.push({
-      highres: "https://slicedpixel.com/eventos/2019-12-07-Luiza/luiza-" + i + "_high.jpg",
-      mediumres: "https://slicedpixel.com/eventos/2019-12-07-Luiza/luiza-" + i + "_medium.jpg",
-      lowres: "https://slicedpixel.com/eventos/2019-12-07-Luiza/luiza-" + i + "_low.jpg"
+      highres: "https://slicedpixel.com/eventos/festa-luiza/festa-luiza-" + i + ".jpg",
+      mediumres: "https://slicedpixel.com/eventos/festa-luiza/festa-luiza-" + i + ".jpg",
+      lowres: "https://slicedpixel.com/eventos/festa-luiza/festa-luiza-" + i + ".jpg"
     })
   }
 
   for (let i = 1; i < 301; i++) {
     eventList[1].fotos.push({
-      highres: "https://slicedpixel.com/eventos/2019-12-08-festa-encerramento/festa-encerramento-" + i + "_768.jpg",
-      mediumres: "https://slicedpixel.com/eventos/2019-12-08-festa-encerramento/festa-encerramento-" + i + "_768.jpg",
-      lowres: "https://slicedpixel.com/eventos/2019-12-08-festa-encerramento/festa-encerramento-" + i + "_768.jpg"
+      highres: "https://slicedpixel.com/eventos/festa-encerramento/festa-encerramento-" + i + ".jpg",
+      mediumres: "https://slicedpixel.com/eventos/festa-encerramento/festa-encerramento-" + i + ".jpg",
+      lowres: "https://slicedpixel.com/eventos/festa-encerramento/festa-encerramento-" + i + ".jpg"
     })
   }
 
